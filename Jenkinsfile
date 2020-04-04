@@ -2,15 +2,22 @@ pipeline{
 	agent any{
 		stages{
 			stage('Build'){
-				echo"Building"
-				mvn clean package
+				step{
+					echo"Building"
+					mvn clean package
+				}
 			}
 			stage('test'){
-				echo"Test"
-				mvn test
+				step{
+					echo"Building"
+					mvn clean package
+				}
 			}
 			stage('Deploy'){
-				echo"ToBe Deployed"
+				step{
+					echo"Building"
+					mvn clean package
+				}
 			}
 		}
 	}

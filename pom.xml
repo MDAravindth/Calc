@@ -8,7 +8,6 @@
 	
 <version>0.0.1-SNAPSHOT</version>
 	<name>Calculator_WebApp</name>
-	<url>http://cal.ms.com</url>
 	
 	<dependencies>
 		<dependency>

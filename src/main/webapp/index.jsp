@@ -5,7 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>cal.ms.com</title>
-<body bgcolor="blue">
+<<<<<<< HEAD
+<body bgcolor="yellow">
+=======
+<body bgcolor="green">
+>>>>>>> refs/remotes/origin/master
 <form method="get" action="./CalculateServlet">
 
 Number 1 : <input type="text" name="no1"> <br>

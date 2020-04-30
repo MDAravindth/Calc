@@ -9,7 +9,7 @@ pipeline{
 			stage("Test"){
 				steps{
 					sh 'mvn test'
-					sh 'echo $WORKSPACE; ls -ltr'
+					sh 'cd target; ls -ltr'
 				     }
 				}
 			stage("Deploy"){

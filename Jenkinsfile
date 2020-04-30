@@ -9,7 +9,7 @@ pipeline{
 			stage("Test"){
 				steps{
 					sh 'mvn test'
-					sh 'cd target; ls -ltr'
+					sh 'chmod -r 755 target/'
 				     }
 				}
 			stage("Deploy"){

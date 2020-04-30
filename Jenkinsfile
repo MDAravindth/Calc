@@ -10,7 +10,7 @@ pipeline{
 				steps{
 					sh 'mvn test'
 					sh 'echo $WORKSPACE; ls -ltr'
-					
+				     }
 				}
 			stage("Deploy"){
 				steps{
@@ -18,5 +18,4 @@ pipeline{
 				}
 			}
 		}
-	}
 }

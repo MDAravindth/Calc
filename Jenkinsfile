@@ -1,5 +1,5 @@
 pipeline{
-	agent { any }
+	agent any
 		stages{
 			stage("build"){
 				steps{
@@ -7,7 +7,7 @@ pipeline{
 				}
 			}
 			stage("Test"){
-				step{
+				steps{
 					sh 'mvn test'
 				}
 			}

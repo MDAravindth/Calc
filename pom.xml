@@ -74,7 +74,7 @@
 				<version>2.2</version>
 				<configuration>
 					<url>http://localhost:8020/manager/text</url>
-					<server>TomcatServer</server>
+					<server>localhost</server>
 					<path>/calc</path>
 				</configuration>
 			</plugin>

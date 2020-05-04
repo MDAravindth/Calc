@@ -1,20 +1,24 @@
-pipeline{
-	agent any
+pipline{
+	agent none
 		stages{
-			stage("build"){
+			stages("Build"){
+				agent {
+					docker {
+						image 'maven:latest'
+					}
+				}
 				steps{
 					sh 'mvn clean package'
-				}
+				}			
 			}
-			stage("Test"){
+			stages("Testing"){
+				agent {
+					docker {
+						image 'maven:latest'
+					}
+				}
 				steps{
 					sh 'mvn test'
-					sh 'echo $WORKSPACE; ls -ltr'
-				     }
-				}
-			stage("Deploy"){
-				steps{
-					sh './deploy.sh'
 				}
 			}
 		}

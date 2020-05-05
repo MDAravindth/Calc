@@ -1,10 +1,8 @@
 pipeline{
 	agent any
-			stage("Deploy"){
-				steps{
-					
-					docker image -t Cac build .
-					
+		stage("Deploy"){
+			steps{				
+				sh 'docker image -t Cac build .'	
 				}
 			}
 }

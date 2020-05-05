@@ -21,5 +21,15 @@ pipline{
 					sh 'mvn test'
 				}
 			}
+			stage("Deploy"){
+				agent{
+					docker{
+						image 'tomcat:me'
+					}
+				}
+				steps{
+					cp $WORKSPACE/target/*.war $CATALINA_HOME/webapps/
+				}
+			}
 		}
 }

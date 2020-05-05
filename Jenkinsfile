@@ -1,12 +1,31 @@
 pipeline{
-	agent any
+	agent none
 		stages{
+			stage("Build"){
+				agent {
+					docker {
+						image 'maven:latest'
+					}
+				}
+				steps{
+					sh 'mvn clean package'
+				}			
+			}
+			stage("Testing"){
+				agent {
+					docker {
+						image 'maven:latest'
+					}
+				}
+				steps{
+					sh 'mvn test'
+				}
+			}
 			stage("Deploy"){
-				steps{				
-					sh 'docker image build -t calc .'
-					sh 'docker run -d -p 8089:8080 --name calculate calc'
-					
+				agent{ dockerfile true }
+				steps{
+					sh "docker logs ${c.id}"
 				}
 			}
 		}
-}	
+}

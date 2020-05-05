@@ -3,7 +3,7 @@ pipeline{
 		stages{
 			stage("Deploy"){
 				steps{				
-					sh 'docker image -t Cac build .'	
+					sh 'docker image build -t Cac .'	
 				}
 			}
 		}

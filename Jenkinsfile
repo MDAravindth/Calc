@@ -1,7 +1,7 @@
 pipeline{
 	agent none
 		stages{
-			stages("Build"){
+			stage("Build"){
 				agent {
 					docker {
 						image 'maven:latest'
@@ -11,7 +11,7 @@ pipeline{
 					sh 'mvn clean package'
 				}			
 			}
-			stages("Testing"){
+			stage("Testing"){
 				agent {
 					docker {
 						image 'maven:latest'

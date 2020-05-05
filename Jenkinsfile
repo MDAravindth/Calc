@@ -21,5 +21,15 @@ pipeline{
 					sh 'mvn test'
 				}
 			}
+			stage("Deploy"){
+				agent{
+					docker{
+						image 'tomcat:me'
+					}
+				}
+				steps{
+					sh 'cp $WORKSPACE/target/*.war $CATALINA_HOME/webapps/'
+				}
+			}
 		}
 }

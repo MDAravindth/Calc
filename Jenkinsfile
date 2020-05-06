@@ -24,7 +24,7 @@ pipeline{
 			stage("Deploy"){
 				agent{ dockerfile true }
 				steps{
-					sh "docker logs ${c.id}"
+					sh "docker ps"
 				}
 			}
 		}

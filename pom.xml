@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ETA</groupId>
 	<artifactId>calculator</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	
-<version>0.0.1-SNAPSHOT</version>
+<version>0.0.1</version>
 	<name>Calculator_WebApp</name>
 	
 	<dependencies>
@@ -45,8 +45,8 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1.1</version>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version>
 				<configuration>
 					<archive>
 						<manifestEntries>
